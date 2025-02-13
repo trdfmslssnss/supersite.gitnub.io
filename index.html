@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать на наш сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="rainbow-text">Добро пожаловать на крупнейший в мире ГЕЙ сайт</h1>
+        <div class="image-container">
+            <!-- Место для вашей картинки -->
+            <img src="tema 2.jpg" alt="Ваша картинка" class="main-image">
+        </div>
+        <button class="services-button" onclick="goToServices()">Услуги</button>
+    </div>
+
+    <div class="registration-sidebar">
+        <button class="close-btn" onclick="toggleRegistration()">×</button>
+        <h2>Регистрация</h2>
+        <form class="registration-form">
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
