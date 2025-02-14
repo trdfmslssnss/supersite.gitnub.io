@@ -295,3 +295,415 @@ body {
         margin-top: 10px;
     }
 }
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .rainbow-text {
+        font-size: 2rem;
+        margin-top: 20px;
+        line-height: 1.2; /* Улучшаем читаемость */
+    }
+
+    .services-button, .registration-toggle, .back-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 100%; /* Кнопки занимают всю ширину */
+        margin: 10px 0;
+    }
+
+    .main-image {
+        max-width: 100%;
+        height: auto; /* Изображения не обрезаются */
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .registration-sidebar {
+        width: 100%;
+        right: -100%;
+        padding: 20px;
+    }
+
+    .registration-sidebar.open {
+        right: 0;
+    }
+
+    .registration-form input {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .registration-form button {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .floating-shape {
+        display: none;
+    }
+
+    .services-page h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .services-page p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .services-page .image-container {
+        margin: 10px 0;
+    }
+
+    .services-page .description {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .services-page .back-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+}/* Общие стили для всех устройств */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Радужный текст */
+.rainbow-text {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Улучшаем читаемость */
+}
+
+/* Картинка */
+.image-container {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопки */
+.services-button, .back-button, .registration-toggle {
+    background-color: yellow;
+    color: purple;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 0;
+    width: 100%; /* Кнопки занимают всю ширину */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+}
+
+.services-button:hover, .back-button:hover, .registration-toggle:hover {
+    background-color: gold;
+    transform: scale(1.05);
+}
+
+/* Боковая вкладка регистрации */
+.registration-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.registration-sidebar.open {
+    right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: purple;
+}
+
+.close-btn:hover {
+    color: yellow;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.registration-form input {
+    padding: 10px;
+    border: 1px solid purple;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%; /* Поля занимают всю ширину */
+}
+
+.registration-form button {
+    background-color: yellow;
+    color: purple;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Кнопка занимает всю ширину */
+}
+
+.registration-form button:hover {
+    background-color: gold;
+}
+
+/* Плавающие фигуры */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.floating-shape {
+    position: absolute;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, yellow, purple);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid yellow;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, purple, yellow);
+    transform: rotate(45deg);
+}
+
+.shape-1 {
+    top: 10%;
+    left: 5%;
+    animation-duration: 8s;
+}
+
+.shape-2 {
+    top: 20%;
+    right: 10%;
+    animation-duration: 10s;
+}
+
+.shape-3 {
+    bottom: 15%;
+    left: 20%;
+    animation-duration: 12s;
+}
+
+.shape-4 {
+    bottom: 5%;
+    right: 15%;
+    animation-duration: 9s;
+}
+
+/* Стили для второй страницы (services.html) */
+.services-page .container {
+    padding: 20px;
+    text-align: center;
+}
+
+.services-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: purple;
+}
+
+.services-page p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: purple;
+}
+
+.services-page .image-container {
+    margin: 20px 0;
+}
+
+.services-page .main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.services-page .description {
+    font-size: 1rem;
+    color: purple;
+    margin: 20px 0;
+}
+
+.services-page .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: yellow;
+    color: purple;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.services-page .back-button:hover {
+    background-color: gold;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .rainbow-text {
+        font-size: 2rem;
+        margin-top: 20px;
+        line-height: 1.2; /* Улучшаем читаемость */
+    }
+
+    .services-button, .registration-toggle, .back-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 100%; /* Кнопки занимают всю ширину */
+        margin: 10px 0;
+    }
+
+    .main-image {
+        max-width: 100%;
+        height: auto; /* Изображения не обрезаются */
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .registration-sidebar {
+        width: 100%;
+        right: -100%;
+        padding: 20px;
+    }
+
+    .registration-sidebar.open {
+        right: 0;
+    }
+
+    .registration-form input {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .registration-form button {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .floating-shape {
+        display: none;
+    }
+
+    .services-page h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .services-page p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .services-page .image-container {
+        margin: 10px 0;
+    }
+
+    .services-page .description {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .services-page .back-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+}
