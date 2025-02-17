@@ -48,6 +48,7 @@ body {
     width: 95%;
     height: auto;
     border-radius: 10px;
+    margin-right: -10px;
 } 
 
 .main-image {
