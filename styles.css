@@ -32,7 +32,7 @@ body {
 }
 
 .img-container {
-    width: 95vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
 } 
@@ -40,13 +40,13 @@ body {
 /* Картинка */
 .image-container {
     margin-top: 20px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-image {
+.main-image2 {
     width: 95%;
     height: auto;
     border-radius: 10px;
