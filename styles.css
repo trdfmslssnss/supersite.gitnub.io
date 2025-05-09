@@ -28,7 +28,7 @@ body {
 
 /* Радужный текст */
 .rainbow-text {
-    background: linear-gradient(90deg, indigo, red);
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
